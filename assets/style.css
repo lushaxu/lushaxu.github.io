@@ -17,6 +17,7 @@
 
   --shell:  1120px;
   --rail:   248px;
+  --nav-h:  54px;
   --gutter: 72px;
 
   --s1: 6px;   --s2: 12px;  --s3: 18px;
@@ -84,11 +85,11 @@ a:hover{ color:var(--teal); }
 
 .rail{
   position:sticky;
-  top:0;
+  top:var(--nav-h);
   align-self:start;
-  padding:var(--s7) var(--s5) var(--s6) 0;
+  padding:var(--s6) var(--s5) var(--s6) 0;
   border-right:1px solid var(--rule);
-  min-height:100vh;
+  min-height:calc(100vh - var(--nav-h));
 }
 
 .portrait{
@@ -151,38 +152,49 @@ a:hover{ color:var(--teal); }
  font-weight:500; }
 .rail .contact a:hover{ color:var(--teal-deep); border-bottom-color:var(--rule); }
 
-.rail nav{
-  margin-top:var(--s5);
-  display:flex;
-  flex-direction:column;
+/* ---- top bar ---- */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:60;
+  background:var(--paper);
+  border-bottom:1px solid var(--rule);
 }
-.rail nav a{
+.topnav{
+  max-width:var(--shell);
+  margin:0 auto;
+  padding:0 32px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:0 var(--s4);
+  height:var(--nav-h);
+}
+.topnav a{
   position:relative;
   font-family:var(--mono);
   font-size:12.5px;
+  font-weight:500;
   letter-spacing:0.06em;
   text-transform:uppercase;
   color:var(--ink-soft);
   text-decoration:none;
-  padding:8px 0 8px 18px;
-  border-bottom:1px solid var(--rule-soft);
-  transition:color .15s ease, padding-left .15s ease;
- font-weight:500; }
-.rail nav a:last-child{ border-bottom:none; }
-.rail nav a::before{
+  padding:6px 0;
+  transition:color .15s ease;
+}
+.topnav a::after{
   content:"";
   position:absolute;
-  left:0; top:50%;
-  width:8px; height:1.4px;
-  background:var(--rule);
-  transform:translateY(-50%);
-  transition:background .15s ease, width .15s ease;
+  left:0; right:0; bottom:0;
+  height:1.5px;
+  background:transparent;
+  transition:background .15s ease;
 }
-.rail nav a:hover{ color:var(--teal-deep); padding-left:22px; }
-.rail nav a:hover::before{ background:var(--teal-deep); }
-.rail nav a .ext{ margin-left:5px; font-size:9.5px; vertical-align:1px; opacity:.6; }
-.rail nav a[aria-current="page"]{ color:var(--ink); }
-.rail nav a[aria-current="page"]::before{ background:var(--gold); width:12px; }
+.topnav a:hover{ color:var(--teal-deep); }
+.topnav a:hover::after{ background:var(--rule); }
+.topnav a .ext{ margin-left:5px; font-size:9.5px; vertical-align:1px; opacity:.6; }
+.topnav a[aria-current="page"]{ color:var(--ink); }
+.topnav a[aria-current="page"]::after{ background:var(--gold); }
 
 
 .jm-badge{
@@ -193,14 +205,14 @@ a:hover{ color:var(--teal); }
   letter-spacing:0.05em;
   text-transform:uppercase;
   color:var(--paper);
-  background:var(--gold);
+  background:var(--ink);
   padding:6px 12px;
   border-radius:2px;
  font-weight:500; }
 
 /* ---- content column ---- */
 .content{
-  padding:var(--s7) 0 var(--s7);
+  padding:var(--s6) 0 var(--s7);
   min-width:0;
 }
 
@@ -233,6 +245,7 @@ a:hover{ color:var(--teal); }
 .lead + .lead{ margin-top:var(--s3); }
 
 section{
+  scroll-margin-top:calc(var(--nav-h) + var(--s2));
   padding-top:var(--s6);
   margin-top:var(--s6);
   border-top:1px solid var(--rule);
@@ -319,7 +332,7 @@ h2.sec-title{
   color:var(--gold);
   border:1px solid var(--gold);
  font-weight:500; }
-.status-tag.solid{ background:var(--gold); color:var(--paper); border-color:var(--gold); }
+.status-tag.solid{ background:var(--ink); color:var(--paper); border-color:var(--ink); }
 
 .more-link{
   display:inline-flex;
@@ -457,12 +470,13 @@ ul.courses .term{
     gap:0;
     padding:0 26px;
   }
+  .topnav{ padding:0 26px; }
   .rail{
     position:static;
     min-height:0;
     border-right:none;
     border-bottom:1px solid var(--rule);
-    padding:var(--s6) 0 var(--s5);
+    padding:var(--s5) 0 var(--s5);
   }
   .rail{ min-width:0; }
   .rail-head{ display:flex; align-items:flex-start; gap:20px; }
@@ -472,17 +486,6 @@ ul.courses .term{
   .rail-id{ min-width:0; }
   .rail .eyebrow{ font-size:10.5px; letter-spacing:0.07em; }
   .rail .name{ font-size:clamp(28px, 7.5vw, 40px); }
-  .rail nav{
-    margin-top:var(--s4);
-    flex-direction:row;
-    flex-wrap:wrap;
-    gap:0 var(--s4);
-  }
-  .rail nav a{
-    border-bottom:none;
-    padding:6px 0 6px 16px;
-  }
-  .rail nav a:hover{ padding-left:20px; }
   .rail .contact{ margin-top:var(--s3); }
   .content{ padding:var(--s6) 0; }
 }
@@ -506,7 +509,7 @@ ul.courses .term{
     position:static; min-height:0; border:none;
     padding:0 0 12pt; text-align:center;
   }
-  .rail nav, .jm-badge, .skip-link,
+  .topbar, .jm-badge, .skip-link,
   .more-link, .portrait{ display:none; }
   .rail .contact{ flex-direction:row; justify-content:center; gap:16px; margin-top:6pt; }
   .content{ padding:0; }
@@ -518,5 +521,5 @@ ul.courses .term{
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   .rail, .content > .lead, .page-head{ animation:none; }
-  .rail nav a, .more-link .arrow{ transition:none; }
+  .topnav a, .more-link .arrow{ transition:none; }
 }
