@@ -1,0 +1,6 @@
+# Source material for the GradQuant page — contains student names, emails and IDs.
+# Never publish: only aggregate counts from these files appear on the site.
+temp/
+
+# macOS
+.DS_Store

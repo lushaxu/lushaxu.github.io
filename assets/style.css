@@ -248,6 +248,39 @@ main{ padding-bottom:var(--s6); }
 .intro-text p{ font-size:16.5px; }
 .intro-text strong{ color:var(--ink-strong); font-weight:700; }
 
+/* ---- stat row ---- */
+.stats{
+  list-style:none;
+  margin:0 auto var(--s5);
+  padding:0;
+  max-width:56ch;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+  gap:var(--s3);
+}
+.stats li{
+  text-align:center;
+  padding:var(--s3) var(--s2);
+  background:var(--paper-alt);
+  border:1px solid var(--rule);
+}
+.stats .n{
+  display:block;
+  font-family:var(--display);
+  font-size:30px;
+  font-weight:600;
+  line-height:1.1;
+  color:var(--navy-deep);
+  font-variant-numeric:tabular-nums;
+}
+.stats .k{
+  display:block;
+  margin-top:6px;
+  font-size:13px;
+  line-height:1.4;
+  color:var(--ink-faint);
+}
+
 /* ---- interests ---- */
 .interests{
   list-style:none; margin:0; padding:0;

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GradQuant &mdash; Lusha Xu</title>
+<meta name="description" content="Lusha Xu is Lead Consultant at GradQuant, UC Riverside's Graduate Quantitative Methods Center: workshops on Python, time series, high-dimensional data, and large language models, plus one-on-one methods consulting for graduate students.">
+<link rel="canonical" href="https://lushaxu.github.io/gradquant.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GradQuant &mdash; Lusha Xu">
+<meta property="og:description" content="Workshops and one-on-one quantitative methods consulting for graduate students across UC Riverside.">
+<meta property="og:url" content="https://lushaxu.github.io/gradquant.html">
+<meta property="og:image" content="https://lushaxu.github.io/apple-touch-icon.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css?v=2">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark-inst">Lusha Xu</span>
+      <span class="wordmark-dept">University of California, Riverside &middot; Economics</span>
+    </a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="gradquant.html" aria-current="page">GradQuant</a>
+      <a href="CV.pdf" target="_blank" rel="noopener">CV<span class="ext" aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <section class="hero hero--slim">
+    <div class="hero-inner">
+      <h1 class="hero-name">GradQuant</h1>
+      <p class="hero-sub">Lead Consultant at the Graduate Quantitative Methods Center, UC Riverside &mdash; workshops and one-on-one methods consulting for graduate students across the university.</p>
+    </div>
+  </section>
+
+  <main id="main" class="wrap">
+
+    <section class="block" id="role">
+      <h2 class="block-title">The Role<span class="sub">Lead Consultant &middot; 2025&ndash;2026</span></h2>
+      <div class="course-group">
+        <p class="cons-desc">
+          GradQuant is UC Riverside&rsquo;s campus-wide center for quantitative and computational
+          methods training. As Lead Consultant I work with graduate students from every school on
+          campus &mdash; on their own data, at whatever stage they have reached.
+        </p>
+        <ul class="courses">
+          <li><span class="title">Individual consultations and drop-in hours on statistics and programming</span></li>
+          <li><span class="title">Developing and presenting workshops</span></li>
+          <li><span class="title">Scheduling and coordinating part-time consultants</span></li>
+          <li><span class="title">Building and maintaining the center&rsquo;s teaching resources and website</span></li>
+          <li><span class="title">Outreach: campus events, GradSuccess programming, and social media</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block" id="workshops">
+      <h2 class="block-title">Workshops<span class="sub">Hands-on sessions in Python, taught in Google Colab</span></h2>
+
+      <article class="paper">
+        <h3>Introduction to Python</h3>
+        <p class="meta">~2 hours &middot; no prior programming experience</p>
+        <p class="abstract">
+          Getting set up in Colab, then the essentials: variables and data types, strings and
+          f-strings, lists, tuples and dictionaries, indexing and slicing, functions and modules,
+          and plotting with matplotlib. The session closes with a mini project that pulls CPI and
+          unemployment from FRED, computes year-over-year inflation, and fits a Phillips curve.
+        </p>
+        <p class="meta"><a href="workshops/intro-to-python.html">Open the notebook &rarr;</a></p>
+      </article>
+
+      <article class="paper">
+        <h3>Time Series Analysis</h3>
+        <p class="meta">2 hours</p>
+        <p class="abstract">
+          Why time series breaks the OLS assumptions, and what to do about it. Trend, seasonality,
+          cycles, shocks and structural breaks; stationarity, unit roots and the ADF test; seasonal
+          decomposition; reading ACF and PACF to choose lag orders; estimating ARIMA and SARIMA,
+          validating with Ljung&ndash;Box, and forecasting out of sample. Worked on U.S. real GDP and
+          the airline passenger series.
+        </p>
+        <p class="meta"><a href="workshops/time-series-analysis.html">Open the notebook &rarr;</a></p>
+      </article>
+
+      <article class="paper">
+        <h3>High-Dimensional Data: From Factor Models to Deep Learning</h3>
+        <p class="meta">April 2026</p>
+        <p class="abstract">
+          Four strategies for forecasting with many correlated predictors, compared on a simulated
+          macro dataset with three latent factors and sixty indicators: PCA and factor models
+          (compression), partial least squares (supervised compression), Lasso (sparse selection),
+          and neural networks (representation learning). Covers the estimation problem behind each
+          method and how to evaluate them with out-of-sample RMSE, MAE and R&sup2; against an AR(1)
+          benchmark.
+        </p>
+        <p class="meta"><a href="workshops/high-dimensional-data.html">Open the notebook &rarr;</a></p>
+      </article>
+
+      <article class="paper">
+        <h3>Large Language Models: Theory and Practice</h3>
+        <p class="abstract">
+          First the mechanism &mdash; tokens, embeddings, positional encoding, attention,
+          multi-head attention, encoder and decoder blocks, and what pretraining and post-training
+          do to a model&rsquo;s behavior. Then research practice: when an LLM beats a dictionary or a
+          fine-tuned classifier and when it does not, calling an API reproducibly, grounding prompts
+          in source text, and validating model output against hand-coded samples &mdash; demonstrated
+          by scoring FOMC statements for hawkishness.
+        </p>
+        <p class="meta"><a href="workshops/llm-theory-and-practice.html">Open the notebook &rarr;</a></p>
+      </article>
+    </section>
+
+    <section class="block" id="consultations">
+      <h2 class="block-title">Consultations<span class="sub">August 2025 &ndash; June 2026</span></h2>
+
+      <ul class="stats">
+        <li><span class="n">48</span><span class="k">consultations and drop-ins</span></li>
+        <li><span class="n">20</span><span class="k">graduate programs</span></li>
+      </ul>
+
+      <div class="course-group">
+        <p class="cons-desc">
+          Thirty-six scheduled appointments and twelve drop-in sessions. The scheduled ones drew
+          students from CNAS, CHASS, BCOE, the School of Public Policy, the School of Medicine and
+          the Graduate School of Education &mdash; entomology, plant pathology, psychology, political
+          science, computer science, materials science, public policy, economics and more.
+          Twenty-one were doctoral students, nine master&rsquo;s students, five postdoctoral
+          researchers; fifteen were international students.
+        </p>
+
+        <div class="course-sub">What we worked on</div>
+        <ul class="courses">
+          <li><span class="title">Mixed-effects and generalized linear mixed models &mdash; gamma, Tweedie, zero-inflated and hurdle specifications for count and skewed biological data</span></li>
+          <li><span class="title">ANOVA (two-way, repeated measures) and nonparametric alternatives such as Kruskal&ndash;Wallis</span></li>
+          <li><span class="title">Tests for variance and spread; distributional checks and corrections</span></li>
+          <li><span class="title">Moderated mediation and structural equation models &mdash; identification, centering, interpretation</span></li>
+          <li><span class="title">Machine learning coursework and applied final projects</span></li>
+          <li><span class="title">Panel econometrics in Stata &mdash; nonstationarity, cointegration, error-correction models, difference-in-differences with staggered adoption</span></li>
+          <li><span class="title">Dissertation formatting in LaTeX and Overleaf &mdash; templates, margins, front matter</span></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <span>&copy; Lusha Xu &middot; Riverside, California</span>
+    <span class="line2">
+      <a href="mailto:lusha.xu@gmail.com">lusha.xu@gmail.com</a>
+      <a href="CV.pdf" target="_blank" rel="noopener">Curriculum Vitae</a>
+    </span>
+  </footer>
+
+</body>
+</html>
