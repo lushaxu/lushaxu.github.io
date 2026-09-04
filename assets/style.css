@@ -197,19 +197,6 @@ a:hover{ color:var(--teal); }
 .topnav a[aria-current="page"]::after{ background:var(--gold); }
 
 
-.jm-badge{
-  display:inline-block;
-  margin-top:var(--s3);
-  font-family:var(--mono);
-  font-size:11.5px;
-  letter-spacing:0.05em;
-  text-transform:uppercase;
-  color:var(--paper);
-  background:var(--ink);
-  padding:6px 12px;
-  border-radius:2px;
- font-weight:500; }
-
 /* ---- content column ---- */
 .content{
   padding:var(--s6) 0 var(--s7);
@@ -509,7 +496,7 @@ ul.courses .term{
     position:static; min-height:0; border:none;
     padding:0 0 12pt; text-align:center;
   }
-  .topbar, .jm-badge, .skip-link,
+  .topbar, .skip-link,
   .more-link, .portrait{ display:none; }
   .rail .contact{ flex-direction:row; justify-content:center; gap:16px; margin-top:6pt; }
   .content{ padding:0; }
