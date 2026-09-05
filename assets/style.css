@@ -416,6 +416,87 @@ ul.courses .term{
 .talks .note{ font-style:italic; color:var(--ink-faint); font-size:14px; }
 
 /* ============================================================
+   Student comment stickies
+   ============================================================ */
+.notes-head{
+  font-family:var(--display);
+  font-size:11.5px;
+  font-weight:500;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--navy);
+  text-align:center;
+  margin:var(--s6) 0 var(--s1);
+}
+.notes-note{
+  font-style:italic;
+  font-size:14px;
+  color:var(--ink-faint);
+  text-align:center;
+  margin:0 auto var(--s4);
+  max-width:52ch;
+}
+
+.notes{
+  list-style:none;
+  margin:0;
+  padding:var(--s1) 0;
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+  gap:var(--s4) var(--s3);
+  align-items:start;
+}
+
+.note{
+  margin:0;
+  padding:var(--s3) var(--s3) calc(var(--s3) - 2px);
+  background:var(--note-bg, var(--paper-alt));
+  border:1px solid var(--rule);
+  box-shadow:0 1px 2px rgba(30,42,53,.05), 0 6px 14px -8px rgba(30,42,53,.22);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.note blockquote{
+  margin:0;
+  font-size:14.5px;
+  line-height:1.62;
+  color:var(--ink-strong);
+  text-wrap:pretty;
+}
+.note blockquote::before{
+  content:"\201C";
+  display:block;
+  font-family:var(--display);
+  font-size:30px;
+  font-weight:600;
+  line-height:.1;
+  height:14px;
+  color:var(--navy);
+  opacity:.28;
+}
+.note figcaption{
+  margin-top:var(--s2);
+  padding-top:9px;
+  border-top:1px solid rgba(30,42,53,.09);
+  font-family:var(--display);
+  font-size:10.5px;
+  font-weight:500;
+  letter-spacing:0.13em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+}
+
+/* tinted paper + a slight tilt, cycled every four notes */
+.note:nth-child(4n+1){ --note-bg:#FBF7EC; transform:rotate(-0.7deg); }
+.note:nth-child(4n+2){ --note-bg:#F1F5F3; transform:rotate(0.6deg);  }
+.note:nth-child(4n+3){ --note-bg:#F3F5F8; transform:rotate(-0.4deg); }
+.note:nth-child(4n){   --note-bg:#F9F4F1; transform:rotate(0.8deg);  }
+
+.notes .note:hover{
+  transform:rotate(0deg) translateY(-2px);
+  box-shadow:0 1px 2px rgba(30,42,53,.06), 0 12px 22px -10px rgba(30,42,53,.28);
+}
+
+/* ============================================================
    Footer
    ============================================================ */
 .site-foot{
@@ -450,6 +531,8 @@ ul.courses .term{
   ul.courses .code{ width:auto; }
   ul.courses .term{ width:100%; text-align:left; }
   .talks .row{ flex-direction:column; gap:4px; }
+  .notes{ grid-template-columns:1fr; gap:var(--s3); }
+  .note{ transform:none !important; }
 }
 
 /* ============================================================
@@ -461,11 +544,16 @@ ul.courses .term{
   .hero{ background:none; color:#000; padding:0 0 12pt; }
   .hero-name, .hero-title{ color:#000; }
   .block{ break-inside:avoid; padding-top:14pt; margin-top:14pt; }
-  .paper, ul.courses li{ break-inside:avoid; }
+  .paper, ul.courses li, .note{ break-inside:avoid; }
+  .notes{ display:block; }
+  .note{ transform:none !important; box-shadow:none; background:none; border:none;
+         border-left:2pt solid #000; padding:0 0 0 10pt; margin-bottom:10pt; }
+  .note blockquote::before{ display:none; }
   a{ color:#000; text-decoration:none; }
 }
 
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
-  .mainnav a, .btn{ transition:none; }
+  .mainnav a, .btn, .note{ transition:none; }
+  .note{ transform:none !important; }
 }

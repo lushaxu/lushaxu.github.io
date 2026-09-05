@@ -4,3 +4,6 @@ temp/
 
 # macOS
 .DS_Store
+
+# Local Claude Code dev config (preview server, etc.)
+.claude/
