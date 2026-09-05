@@ -458,7 +458,17 @@ ul.courses .term{
 }
 .talks .venues{ flex:1 1 auto; min-width:0; }
 .talks .venues div + div{ margin-top:7px; }
-.talks .note{ font-style:italic; color:var(--ink-faint); font-size:14px; }
+.talks .note{
+  margin-left:6px;
+  font-family:var(--display);
+  font-size:10.5px;
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  vertical-align:1px;
+  white-space:nowrap;
+}
 
 /* ============================================================
    Student comment stickies
