@@ -178,6 +178,15 @@ a:hover{ color:var(--teal); }
 }
 .btn:hover{ background:#091420; border-color:#fff; color:#fff; }
 
+.btn--ink{
+  margin-top:var(--s3);
+  background:var(--navy-deep);
+  border-color:var(--navy-deep);
+  padding:11px 24px;
+  font-size:11.5px;
+}
+.btn--ink:hover{ background:var(--teal); border-color:var(--teal); color:#fff; }
+
 /* slim variant for interior pages */
 .hero--slim{ padding:var(--s6) 28px; }
 .hero--slim .hero-name{
@@ -230,7 +239,7 @@ main{ padding-bottom:var(--s6); }
 
 /* ---- intro: portrait beside bio ---- */
 .intro{
-  padding-top:var(--s6);
+  padding-top:var(--s5);
   display:grid;
   grid-template-columns:290px minmax(0,1fr);
   gap:var(--s5);
@@ -245,6 +254,28 @@ main{ padding-bottom:var(--s6); }
   object-position:center 18%;
   background:var(--paper-alt);
 }
+.intro-id{
+  margin-bottom:var(--s4);
+  padding-bottom:var(--s4);
+  border-bottom:1px solid var(--rule);
+}
+.intro-name{
+  font-family:var(--display);
+  font-size:clamp(30px, 3.6vw, 40px);
+  font-weight:300;
+  letter-spacing:0.02em;
+  line-height:1.1;
+  color:var(--navy-deep);
+}
+.intro-role{
+  margin:var(--s2) 0 0;
+  font-family:var(--display);
+  font-size:15px;
+  font-weight:500;
+  line-height:1.5;
+  color:var(--ink);
+}
+
 .intro-text p{ font-size:16.5px; }
 .intro-text strong{ color:var(--ink-strong); font-weight:700; }
 
@@ -524,8 +555,10 @@ ul.courses .term{
 
 @media (max-width:560px){
   :root{ --s6:52px; --s7:64px; }
-  .mainnav{ gap:0 var(--s3); }
-  .mainnav a{ font-size:11.5px; letter-spacing:0.12em; }
+  .mainnav{ gap:0 var(--s2); }
+  .mainnav a{ font-size:11px; letter-spacing:0.08em; }
+  .portrait{ width:min(200px, 52vw); }
+  .intro-id{ margin-bottom:var(--s3); padding-bottom:var(--s3); }
   .paper .abstract{ text-align:left; }
   ul.courses li{ flex-wrap:wrap; gap:2px var(--s2); }
   ul.courses .code{ width:auto; }
