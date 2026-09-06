@@ -241,7 +241,7 @@ main{ padding-bottom:var(--s6); }
 .intro{
   padding-top:var(--s5);
   display:grid;
-  grid-template-columns:290px minmax(0,1fr);
+  grid-template-columns:260px minmax(0,1fr);
   gap:var(--s5);
   align-items:start;
 }
@@ -249,9 +249,9 @@ main{ padding-bottom:var(--s6); }
   display:block;
   width:100%;
   height:auto;
-  aspect-ratio:4 / 5;
+  aspect-ratio:1 / 1;
   object-fit:cover;
-  object-position:center 18%;
+  object-position:center 20%;
   background:var(--paper-alt);
 }
 .intro-id{ min-width:0; }
@@ -289,7 +289,7 @@ main{ padding-bottom:var(--s6); }
 
 /* pull the first line's leading out so its cap-height sits level with the
    top edge of the portrait, rather than the line box doing so */
-.intro-text{ margin-top:-6px; }
+.intro-text{ margin-top:-6px; max-width:60ch; }
 .intro-text p{ font-size:16.5px; }
 .intro-text strong{ color:var(--ink-strong); font-weight:700; }
 
