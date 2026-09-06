@@ -249,9 +249,9 @@ main{ padding-bottom:var(--s6); }
   display:block;
   width:100%;
   height:auto;
-  aspect-ratio:1 / 1;
+  aspect-ratio:4 / 5;
   object-fit:cover;
-  object-position:center 20%;
+  object-position:center 18%;
   background:var(--paper-alt);
 }
 .intro-id{ min-width:0; }
