@@ -7630,7 +7630,10 @@ $$\text{features} \rightarrow \text{prediction} \qquad \text{becomes} \qquad \te
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">tiktoken</span> <span class="n">anthropic</span> <span class="n">sentence</span><span class="o">-</span><span class="n">transformers</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="o">--</span><span class="n">quiet</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">tiktoken</span> <span class="n">anthropic</span> <span class="n">sentence</span><span class="o">-</span><span class="n">transformers</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="o">--</span><span class="n">quiet</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"ready"</span><span class="p">)</span>
 </pre></div>
@@ -8038,6 +8041,9 @@ $$\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\!\left(\frac{QK^T}{\sqrt{d_k}}\
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">AutoTokenizer</span><span class="p">,</span> <span class="n">AutoModel</span>
 
+<span class="kn">import</span> <span class="nn">transformers</span>
+<span class="n">transformers</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">set_verbosity_error</span><span class="p">()</span>
+
 <span class="c1"># --------------------------------------------------</span>
 <span class="c1"># Sentence with a clear pronoun-antecedent relation</span>
 <span class="c1"># --------------------------------------------------</span>
@@ -8187,23 +8193,9 @@ $$\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\!\left(\frac{QK^T}{\sqrt{d_k}}\
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_auth.py:112: UserWarning: 
-The secret `HF_TOKEN` does not exist in your Colab secrets.
-To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
-You will be able to reuse this secret in all of your notebooks.
-Please note that authentication is recommended but still optional to access public models or datasets.
-  warnings.warn(
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jupyter-widgets jp-OutputArea-output" id="7925954e-ecdf-403a-b7df-655e7ba8ceea" tabindex="0">
+<div class="jupyter-widgets jp-OutputArea-output" id="f9606cab-7375-40e7-9f34-29d2fb8678f1" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('7925954e-ecdf-403a-b7df-655e7ba8ceea');
+var element = document.getElementById('f9606cab-7375-40e7-9f34-29d2fb8678f1');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"version_major": 2, "version_minor": 0, "model_id": "7f4f1432f0a74595b681b491e1f90dc1"}
@@ -8212,9 +8204,9 @@ var element = document.getElementById('7925954e-ecdf-403a-b7df-655e7ba8ceea');
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jupyter-widgets jp-OutputArea-output" id="b2a85dfa-9d7b-4922-bf01-b5d6c70642a0" tabindex="0">
+<div class="jupyter-widgets jp-OutputArea-output" id="6f506a90-4cc5-4bc0-9533-63059fe565c5" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('b2a85dfa-9d7b-4922-bf01-b5d6c70642a0');
+var element = document.getElementById('6f506a90-4cc5-4bc0-9533-63059fe565c5');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"version_major": 2, "version_minor": 0, "model_id": "defe96b7cb0945669a5b7f11e284f84c"}
@@ -8223,9 +8215,9 @@ var element = document.getElementById('b2a85dfa-9d7b-4922-bf01-b5d6c70642a0');
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jupyter-widgets jp-OutputArea-output" id="97524ae7-0d1d-424d-b1b6-1f729559cc9b" tabindex="0">
+<div class="jupyter-widgets jp-OutputArea-output" id="88ecf764-8009-496b-abb2-b1e9b3bef94c" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('97524ae7-0d1d-424d-b1b6-1f729559cc9b');
+var element = document.getElementById('88ecf764-8009-496b-abb2-b1e9b3bef94c');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"version_major": 2, "version_minor": 0, "model_id": "119c770399da48b290d95a913fd80b9b"}
@@ -8234,9 +8226,9 @@ var element = document.getElementById('97524ae7-0d1d-424d-b1b6-1f729559cc9b');
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jupyter-widgets jp-OutputArea-output" id="4852d33c-6541-4876-b8b8-48000986d172" tabindex="0">
+<div class="jupyter-widgets jp-OutputArea-output" id="278ef171-0fec-493f-a8c9-e3d6a782f148" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('4852d33c-6541-4876-b8b8-48000986d172');
+var element = document.getElementById('278ef171-0fec-493f-a8c9-e3d6a782f148');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"version_major": 2, "version_minor": 0, "model_id": "8f7e02b175ba4584b2be7475e6e398ea"}
@@ -8245,9 +8237,9 @@ var element = document.getElementById('4852d33c-6541-4876-b8b8-48000986d172');
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jupyter-widgets jp-OutputArea-output" id="754f4f46-d833-4569-96b0-6c764ca74a16" tabindex="0">
+<div class="jupyter-widgets jp-OutputArea-output" id="50618652-fcdd-4da7-a67c-33073e236dde" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('754f4f46-d833-4569-96b0-6c764ca74a16');
+var element = document.getElementById('50618652-fcdd-4da7-a67c-33073e236dde');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"version_major": 2, "version_minor": 0, "model_id": "f6a7fa02d5bd4ef2a89021b2bd9f542d"}
@@ -8256,32 +8248,13 @@ var element = document.getElementById('754f4f46-d833-4569-96b0-6c764ca74a16');
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jupyter-widgets jp-OutputArea-output" id="61f01fe0-5da0-4af1-9297-1f2fe2561741" tabindex="0">
+<div class="jupyter-widgets jp-OutputArea-output" id="3dbbbd9a-ff03-4959-8c54-f7bbe0a3d8b1" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('61f01fe0-5da0-4af1-9297-1f2fe2561741');
+var element = document.getElementById('3dbbbd9a-ff03-4959-8c54-f7bbe0a3d8b1');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"version_major": 2, "version_minor": 0, "model_id": "63b8adb763464d3589c50b4f08892ae1"}
 </script>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>BertModel LOAD REPORT from: bert-base-uncased
-Key                                        | Status     |  | 
--------------------------------------------+------------+--+-
-cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
-cls.predictions.bias                       | UNEXPECTED |  | 
-cls.seq_relationship.weight                | UNEXPECTED |  | 
-cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
-cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
-cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
-cls.seq_relationship.bias                  | UNEXPECTED |  | 
-
-Notes:
-- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8655,21 +8628,6 @@ Best layer/head for she -&gt; researcher: layer=8, head=10, attention=0.6265
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/usr/local/lib/python3.12/dist-packages/google/colab/_import_hooks/_hook_injector.py:55: FutureWarning: 
-
-All support for the `google.generativeai` package has ended. It will no longer be receiving 
-updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
-See README for more details:
-
-https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
-
-  loader.exec_module(module)
-</pre>
-</div>
-</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
