@@ -15,7 +15,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=11">
+<link rel="stylesheet" href="assets/style.css?v=13">
 </head>
 <body>
 
@@ -66,55 +66,47 @@
       <h2 class="block-title">Workshops<span class="sub">Hands-on sessions in Python, taught in Google Colab</span></h2>
 
       <article class="paper">
-        <h3>Introduction to Python</h3>
-        <p class="meta">~2 hours &middot; no prior programming experience</p>
+        <h3>Large Language Models: Theory and Practice</h3>
         <p class="abstract">
-          Getting set up in Colab, then the essentials: variables and data types, strings and
-          f-strings, lists, tuples and dictionaries, indexing and slicing, functions and modules,
-          and plotting with matplotlib. The session closes with a mini project that pulls CPI and
-          unemployment from FRED, computes year-over-year inflation, and fits a Phillips curve.
+            How the models work &mdash; tokens, embeddings, attention, Transformer blocks &mdash; then
+            how to use them in research: when an LLM beats a dictionary, prompting reproducibly, and
+            validating output against hand-coded samples. Demonstrated by scoring FOMC statements for
+            hawkishness.
         </p>
-        <p class="meta"><a href="workshops/intro-to-python.html">Open the notebook &rarr;</a></p>
-      </article>
-
-      <article class="paper">
-        <h3>Time Series Analysis</h3>
-        <p class="meta">2 hours</p>
-        <p class="abstract">
-          Why time series breaks the OLS assumptions, and what to do about it. Trend, seasonality,
-          cycles, shocks and structural breaks; stationarity, unit roots and the ADF test; seasonal
-          decomposition; reading ACF and PACF to choose lag orders; estimating ARIMA and SARIMA,
-          validating with Ljung&ndash;Box, and forecasting out of sample. Worked on U.S. real GDP and
-          the airline passenger series.
-        </p>
-        <p class="meta"><a href="workshops/time-series-analysis.html">Open the notebook &rarr;</a></p>
+        <p class="meta"><a href="workshops/llm-theory-and-practice.html">Open the notebook &rarr;</a></p>
       </article>
 
       <article class="paper">
         <h3>High-Dimensional Data: From Factor Models to Deep Learning</h3>
         <p class="meta">April 2026</p>
         <p class="abstract">
-          Four strategies for forecasting with many correlated predictors, compared on a simulated
-          macro dataset with three latent factors and sixty indicators: PCA and factor models
-          (compression), partial least squares (supervised compression), Lasso (sparse selection),
-          and neural networks (representation learning). Covers the estimation problem behind each
-          method and how to evaluate them with out-of-sample RMSE, MAE and R&sup2; against an AR(1)
-          benchmark.
+            Four strategies for forecasting with many correlated predictors &mdash; PCA and factor
+            models, partial least squares, Lasso, and neural networks &mdash; compared head to head on a
+            simulated macro dataset and scored out of sample against an AR(1) benchmark.
         </p>
         <p class="meta"><a href="workshops/high-dimensional-data.html">Open the notebook &rarr;</a></p>
       </article>
 
       <article class="paper">
-        <h3>Large Language Models: Theory and Practice</h3>
+        <h3>Time Series Analysis</h3>
+        <p class="meta">2 hours</p>
         <p class="abstract">
-          First the mechanism &mdash; tokens, embeddings, positional encoding, attention,
-          multi-head attention, encoder and decoder blocks, and what pretraining and post-training
-          do to a model&rsquo;s behavior. Then research practice: when an LLM beats a dictionary or a
-          fine-tuned classifier and when it does not, calling an API reproducibly, grounding prompts
-          in source text, and validating model output against hand-coded samples &mdash; demonstrated
-          by scoring FOMC statements for hawkishness.
+            Why time series breaks the OLS assumptions, and what to do about it: stationarity and unit
+            roots, seasonal decomposition, reading ACF and PACF, then fitting and forecasting with
+            ARIMA and SARIMA. Worked on U.S. real GDP and airline passengers.
         </p>
-        <p class="meta"><a href="workshops/llm-theory-and-practice.html">Open the notebook &rarr;</a></p>
+        <p class="meta"><a href="workshops/time-series-analysis.html">Open the notebook &rarr;</a></p>
+      </article>
+
+      <article class="paper">
+        <h3>Introduction to Python</h3>
+        <p class="meta">~2 hours &middot; no prior programming experience</p>
+        <p class="abstract">
+            The essentials from scratch in Colab &mdash; data types, lists and dictionaries, functions
+            and modules, plotting with matplotlib &mdash; closing with a mini project that builds a
+            Phillips curve from live FRED data.
+        </p>
+        <p class="meta"><a href="workshops/intro-to-python.html">Open the notebook &rarr;</a></p>
       </article>
     </section>
 
@@ -128,23 +120,17 @@
 
       <div class="course-group">
         <p class="cons-desc">
-          Thirty-six scheduled appointments and twelve drop-in sessions. The scheduled ones drew
-          students from CNAS, CHASS, BCOE, the School of Public Policy, the School of Medicine and
-          the Graduate School of Education &mdash; entomology, plant pathology, psychology, political
-          science, computer science, materials science, public policy, economics and more.
-          Twenty-one were doctoral students, nine master&rsquo;s students, five postdoctoral
-          researchers; fifteen were international students.
+          Thirty-six scheduled appointments and twelve drop-ins, drawn from every school on
+          campus &mdash; entomology, psychology, political science, computer science, materials
+          science, public policy, economics and more. Twenty-one doctoral students, nine
+          master&rsquo;s, five postdocs; fifteen international.
         </p>
 
-        <div class="course-sub">What we worked on</div>
+        <div class="course-sub">Among the topics we worked on</div>
         <ul class="courses">
           <li><span class="title">Mixed-effects and generalized linear mixed models &mdash; gamma, Tweedie, zero-inflated and hurdle specifications for count and skewed biological data</span></li>
-          <li><span class="title">ANOVA (two-way, repeated measures) and nonparametric alternatives such as Kruskal&ndash;Wallis</span></li>
-          <li><span class="title">Tests for variance and spread; distributional checks and corrections</span></li>
-          <li><span class="title">Moderated mediation and structural equation models &mdash; identification, centering, interpretation</span></li>
-          <li><span class="title">Machine learning coursework and applied final projects</span></li>
-          <li><span class="title">Panel econometrics in Stata &mdash; nonstationarity, cointegration, error-correction models, difference-in-differences with staggered adoption</span></li>
-          <li><span class="title">Dissertation formatting in LaTeX and Overleaf &mdash; templates, margins, front matter</span></li>
+          <li><span class="title">ANOVA &mdash; two-way and repeated measures, with nonparametric alternatives such as Kruskal&ndash;Wallis</span></li>
+          <li><span class="title">Machine learning &mdash; coursework and applied final projects</span></li>
         </ul>
       </div>
     </section>
