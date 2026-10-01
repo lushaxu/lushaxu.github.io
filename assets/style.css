@@ -277,6 +277,20 @@ main{ padding-bottom:var(--s6); }
   transition:color .15s ease, border-color .15s ease;
 }
 .intro-mail:hover{ color:var(--teal); border-bottom-color:var(--teal); }
+.intro-cv{
+  display:block;
+  width:fit-content;
+  margin-top:var(--s2);
+  padding:8px 16px;
+  font-family:var(--display);
+  font-size:13px;
+  letter-spacing:0.02em;
+  color:#fff;
+  background:var(--navy);
+  text-decoration:none;
+  transition:background .15s ease;
+}
+.intro-cv:hover{ background:var(--teal); color:#fff; }
 
 .intro-role{
   margin:var(--s1) 0 0;
@@ -563,7 +577,7 @@ ul.courses .term{
   .hero{ padding:var(--s6) 24px; }
   .intro{ grid-template-columns:1fr; gap:var(--s4); }
   .intro-id{ text-align:center; }
-  .intro-id .portrait{ margin-inline:auto; }
+  .intro-id .portrait, .intro-cv{ margin-inline:auto; }
   .portrait{ width:min(260px, 62vw); }
   .intro-name{ font-size:clamp(28px, 7vw, 34px); }
   .mainnav{ gap:0 var(--s4); }
