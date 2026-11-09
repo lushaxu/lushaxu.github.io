@@ -433,6 +433,11 @@ main{ padding-bottom:var(--s6); }
 }
 .paper h3 .draft:hover{ color:var(--teal); text-decoration:underline; }
 
+/* draft link sitting on the meta line rather than beside the title */
+.paper .meta .draft{ color:var(--navy); text-decoration:none; }
+.paper .meta .draft:hover{ color:var(--teal); text-decoration:underline; }
+.paper .meta .sep{ margin:0 7px; color:var(--rule); }
+
 /* ============================================================
    Courses and talks
    ============================================================ */
