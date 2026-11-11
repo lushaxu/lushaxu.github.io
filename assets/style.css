@@ -301,6 +301,15 @@ main{ padding-bottom:var(--s6); }
   color:var(--ink);
 }
 
+.intro-jm{
+  margin:var(--s2) 0 0;
+  font-family:var(--display);
+  font-size:14.5px;
+  font-weight:600;
+  line-height:1.4;
+  color:var(--navy);
+}
+
 /* pull the first line's leading out so its cap-height sits level with the
    top edge of the portrait, rather than the line box doing so */
 .intro-text{ margin-top:-6px; max-width:60ch; }
